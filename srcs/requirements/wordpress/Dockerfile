@@ -2,9 +2,9 @@ FROM debian:12-slim
 
 RUN apt-get update -y && apt-get upgrade -y && apt-get -y install wget
 
-RUN apt-get install -y php7.3 \
-	php-fpm \
-	php-mysql \
+RUN apt-get install -y php8.2 \
+	php8.2-fpm \
+	php8.2-mysql \
 	mariadb-client \
 	tar
 
