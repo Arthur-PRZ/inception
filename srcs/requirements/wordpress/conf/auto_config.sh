@@ -2,6 +2,8 @@
 
 sleep 10
 
+chown -R www-data:www-data /var/www/html
+
 if [ ! -f /var/www/html/wp-config.php ]; then
 	echo "Creation du fichier wp-config.php avec wp.cli..."
 

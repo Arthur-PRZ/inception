@@ -11,7 +11,7 @@ RUN apt-get install -y php8.2 \
 RUN mkdir -p /var/www/html && wget https://wordpress.org/wordpress-6.7.tar.gz -P /var/www && \ 
 	tar -xvf /var/www/wordpress-6.7.tar.gz && mv wordpress/* /var/www/html && rm /var/www/wordpress-6.7.tar.gz
 
-RUN chown -R root:root /var/www/html
+RUN chown -R www-data:www-data /var/www/html
 
 COPY conf/www.conf /etc/php/8.2/fpm/pool.d/www.conf
 
